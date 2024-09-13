@@ -17,7 +17,56 @@ const AllOrders = () => {
         dispatch(getAllOrdersOfShop(seller._id));
     }, [dispatch]);
 
+
     const columns = [
+        { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    
+        {
+            field: "status",
+            headerName: "Status",
+            minWidth: 130,
+            flex: 0.7,
+            // Access status directly from params.row
+            cellClassName: (params) => {
+                return params.row.status === "Delivered" ? "greenColor" : "redColor";
+            },
+        },
+        {
+            field: "itemsQty",
+            headerName: "Items Qty",
+            type: "number",
+            minWidth: 130,
+            flex: 0.7,
+        },
+    
+        {
+            field: "total",
+            headerName: "Total",
+            type: "number",
+            minWidth: 130,
+            flex: 0.8,
+        },
+    
+        {
+            field: " ",
+            flex: 1,
+            minWidth: 150,
+            headerName: "",
+            type: "number",
+            sortable: false,
+            renderCell: (params) => {
+                return (
+                    <Link to={`/order/${params.id}`}>
+                        <Button>
+                            <AiOutlineArrowRight size={20} />
+                        </Button>
+                    </Link>
+                );
+            },
+        },
+    ];
+    
+    /*const columns = [
         { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
 
         {
@@ -66,7 +115,7 @@ const AllOrders = () => {
                 );
             },
         },
-    ];
+    ];*/
 
     const row = [];
 
@@ -75,7 +124,7 @@ const AllOrders = () => {
             row.push({
                 id: item._id,
                 itemsQty: item.cart.length,
-                total: "US$ " + item.totalPrice,
+                total: "Ksh " + item.totalPrice,
                 status: item.status,
             });
         });

@@ -112,7 +112,7 @@ const UserOrderDetails = () => {
               <div className="w-full">
                 <h5 className="pl-3 text-[20px]">{item.name}</h5>
                 <h5 className="pl-3 text-[20px] text-[#00000091]">
-                  US${item.discountPrice} x {item.qty}
+                  Ksh{item.discountPrice} x {item.qty}
                 </h5>
               </div>
               {!item.isReviewed && data?.status === "Delivered" ? (
@@ -216,7 +216,7 @@ const UserOrderDetails = () => {
 
       <div className="border-t w-full text-right">
         <h5>
-          Total Price: <strong>US${data?.totalPrice}</strong>
+          Total Price: <strong>Ksh{data?.totalPrice}</strong>
         </h5>
       </div>
       <br />

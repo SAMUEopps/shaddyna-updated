@@ -59,12 +59,12 @@ const Header = ({ activeHeading }) => {
       <div className={`${styles.section}`}>
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between ">
           <div>
-            <Link to="/">
-              <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                alt=""
-              />
-            </Link>
+          <Link to="/">
+  <img src="/logo.png" alt="Shaddyna Logo" style={{ width: "250px", height: "auto" }} />
+</Link>
+
+
+
           </div>
           {/*Search box  */}
           <div className="w-[50%] relative">
@@ -232,13 +232,9 @@ const Header = ({ activeHeading }) => {
             />
           </div>
           <div>
-            <Link to="/">
-              <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                alt=""
-                className="mt-3 cursor-pointer"
-              />
-            </Link>
+          <Link to="/">
+  <img src="/logo.png" alt="Shaddyna Logo" style={{ width: "100px" }} />
+</Link>
           </div>
 
           <div>

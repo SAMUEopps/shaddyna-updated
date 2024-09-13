@@ -40,7 +40,7 @@ const Cart = ({ setOpenCart }) => {
                 onClick={() => setOpenCart(false)}
               />
             </div>
-            <h5>Cart items is empot!</h5>
+            <h5>Cart items is empty!</h5>
           </div>
         ) : (
           <>
@@ -84,7 +84,7 @@ const Cart = ({ setOpenCart }) => {
                   className={`h-[45px] flex items-center justify-center w-[100%] bg-[#e44343] rounded-[5px]`}
                 >
                   <h1 className="text-[#fff] text-[18px] font-[600]">
-                    Checkout Now (USD${totalPrice})
+                    Checkout Now (Ksh{totalPrice})
                   </h1>
                 </div>
               </Link>
@@ -150,10 +150,10 @@ const CartSingle = ({ data, quantityChangeHandler, removeFromCartHandler }) => {
             <h1>{data.name}</h1>
             <h4 className="font-[400] text-[15px] text-[#00000082]">
               {" "}
-              ${data.discountPrice} * {value}
+              Ksh{data.discountPrice} * {value}
             </h4>
             <h4 className="font-[400] text-[17px] pt-[3px]  text-[#d02222] font-Roboto ">
-              US${totalPrice}
+              Ksh{totalPrice}
             </h4>
           </div>
           <RxCross1

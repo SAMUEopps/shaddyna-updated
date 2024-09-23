@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@devhasibulislam",
-    title: "Canim - Shop & eCommerce React Template",
+    title: "Shaddyna - Shop & eCommerce",
     description:
       "Buy Canim - Shop & eCommerce Next.Js Template by Hasibul Islam. Canim | Shop & eCommerce React Template - a responsive React template. Canim is built with the latest Next.Js 13 App Directory",
     image:

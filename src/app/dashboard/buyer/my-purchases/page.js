@@ -64,7 +64,7 @@ const Page = () => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase whitespace-nowrap"
                   >
-                    Price ($)
+                    Price (ksh)
                   </th>
                   <th
                     scope="col"
@@ -94,7 +94,7 @@ const Page = () => {
                     scope="col"
                     className="px-6 py-3 text-right text-xs font-bold text-gray-500 uppercase whitespace-nowrap"
                   >
-                    Total Price ($)
+                    Total Price (Ksh)
                   </th>
                   <th
                     scope="col"

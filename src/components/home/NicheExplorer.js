@@ -221,7 +221,7 @@ function DisplayBrands() {
                         By {product?.summary}
                       </p>
                       <span className="text-sm mt-2 bg-teal-100 border-teal-900 text-teal-950 rounded-secondary w-fit px-2">
-                        ${product?.price}
+                        Ksh{product?.price}
                       </span>
                     </article>
                   </div>
@@ -372,7 +372,7 @@ function DisplayCategories() {
                         By {product?.summary}
                       </p>
                       <span className="text-sm mt-2 bg-teal-100 border-teal-900 text-teal-950 rounded-secondary w-fit px-2">
-                        ${product?.price}
+                        Ksh{product?.price}
                       </span>
                     </article>
                   </div>
@@ -520,7 +520,7 @@ function DisplayStores() {
                         By {product?.summary}
                       </p>
                       <span className="text-sm mt-2 bg-teal-100 border-teal-900 text-teal-950 rounded-secondary w-fit px-2">
-                        ${product?.price}
+                        Ksh{product?.price}
                       </span>
                     </article>
                   </div>

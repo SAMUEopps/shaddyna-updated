@@ -23,7 +23,7 @@ const Policies = () => {
   const policies = [
     {
       title: "Free Shipping",
-      detail: "On orders over $50.00",
+      detail: "On orders over Ksh50.00",
       icon: <Shipping />,
       className: "bg-red-50",
     },

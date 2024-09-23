@@ -112,7 +112,7 @@ const ExpertChoice = ({ className }) => {
                       <div className="flex flex-row items-end justify-between">
                         <span className="flex items-center border-2 border-green-500 rounded py-1 px-2 md:py-1.5 md:px-2.5 text-sm font-medium">
                           <span className="text-green-500 !leading-none">
-                            ${product?.price}.00
+                            Ksh{product?.price}.00
                           </span>
                         </span>
                         <span className="flex flex-row items-center gap-x-0.5">

@@ -168,7 +168,7 @@ const SearchFilter = () => {
                             </div>
                             <div className="flex flex-row justify-between gap-x-4 items-center">
                               <span className="text-xs flex flex-row items-baseline">
-                                $
+                                Ksh
                                 <span className="text-sm text-black">
                                   {product?.price}.00
                                 </span>

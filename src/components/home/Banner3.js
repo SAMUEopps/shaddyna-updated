@@ -38,11 +38,11 @@ const Banner3 = ({ className }) => {
           <div className="flex flex-col gap-y-4 max-w-lg z-50 lg:mr-auto lg:mr-0 mr-auto">
             <h1 className="md:text-6xl text-4xl">Save money with Shaddyna</h1>
             <p className="flex flex-row gap-x-0.5 items-center text-lg text-slate-500">
-              With Shaddyns you will get quick vendors hustle free.
+              With Shaddyna you will get quick vendors hustle free.
             </p>
             <button
               className="px-8 py-4 border border-black rounded-secondary bg-black hover:bg-black/90 text-white transition-colors drop-shadow w-fit mt-4"
-              onClick={() => router.push("https://devhasibuvercel.app/")}
+              onClick={() => router.push("www.shaddyna.com")}
             >
               Discover More
             </button>

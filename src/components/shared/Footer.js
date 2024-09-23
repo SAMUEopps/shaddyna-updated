@@ -138,15 +138,15 @@ const Footer = () => {
       paths: [
         {
           name: "Facebook",
-          path: "https://www.faceboo.com/devhasibulislam/",
+          path: "/",
         },
         {
           name: "LinkedIn",
-          path: "https://www.linked.com/in/devhasibulislam/",
+          path: "/",
         },
         {
           name: "GitHub",
-          path: "https://githu/devhasibulislam/",
+          path: "/",
         },
       ],
     },

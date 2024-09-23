@@ -1,21 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
-  mode: "jit",
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    fontFamily: {
-      Roboto: ["Roboto", "sans-serif"],
-      Poppins: ["Poppins", "sans-serif"],
-    },
     extend: {
-      screens: {
-        "1000px": "1050px",
-        "1100px": "1110px",
-        "800px": "800px",
-        "1300px": "1300px",
-        "400px": "400px",
+      borderRadius: {
+        DEFAULT: "5px",
+        primary: "1.5rem",
+        secondary: "9999px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar-hide")],
 };

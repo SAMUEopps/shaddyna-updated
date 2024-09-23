@@ -86,15 +86,16 @@ const Signup = () => {
       return;
     }
 
-    // Phone number validation regex
-    const phoneRegex = /^\+88\d{11}$/;
+    // Phone number validation regex for Kenya
+    const phoneRegex = /^\+2547\d{8}$/;
 
     if (!e.target.phone.value.match(phoneRegex)) {
       alert(
-        "Phone number must start with +88 and have a total length of 14 digits."
+        "Phone number must start with +2547 and have a total length of 12 digits."
       );
       return;
     }
+
 
     formData.append("phone", e.target.phone.value);
     formData.append("password", e.target.password.value);

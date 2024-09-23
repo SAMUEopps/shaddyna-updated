@@ -138,15 +138,15 @@ const Footer = () => {
       paths: [
         {
           name: "Facebook",
-          path: "https://www.facebook.com/devhasibulislam/",
+          path: "https://www.faceboo.com/devhasibulislam/",
         },
         {
           name: "LinkedIn",
-          path: "https://www.linkedin.com/in/devhasibulislam/",
+          path: "https://www.linked.com/in/devhasibulislam/",
         },
         {
           name: "GitHub",
-          path: "https://github.com/devhasibulislam/",
+          path: "https://githu/devhasibulislam/",
         },
       ],
     },
@@ -170,7 +170,7 @@ const Footer = () => {
           ))}
         </div>
         <hr />
-        <p className="text-center">&copy; {year} Canim. All rights reserved.</p>
+        <p className="text-center">&copy; {year} Shaddyna. All rights reserved.</p>
       </div>
     </footer>
   );

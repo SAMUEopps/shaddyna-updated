@@ -140,14 +140,16 @@ const FeatureProducts = ({ products }) => {
                 </div>
                 <div
                   onClick={() => navigate(`/product/details/${p.slug}`)}
-                  className="py-3 cursor-pointer text-slate-600 px-2"
+                  className="py-2 cursor-pointer text-slate-600 px-2"
                 >
                   <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center">
-                    {/* Product Name and Price side by side on mobile */}
-                    <h2 className="font-medium">{p.name}</h2>
-                    <span className="text-lg font-bold">Ksh{p.price}</span>
+                    {/* Reduced font sizes for product name and price on mobile */}
+                    <h2 className="font-medium text-sm sm:text-lg">{p.name}</h2>
+                    <span className="text-sm sm:text-lg font-bold">Ksh{p.price}</span>
                   </div>
-                  <div className="flex mt-2">
+
+                  {/* Reduced margins for the rating div on mobile */}
+                  <div className="flex mt-1 sm:mt-2 mb-1 sm:mb-2">
                     <Ratings ratings={p.rating} />
                   </div>
                 </div>

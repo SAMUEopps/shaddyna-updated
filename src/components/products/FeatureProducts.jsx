@@ -148,8 +148,6 @@ const FeatureProducts = ({ products }) => {
                     <h2 className="font-medium">{p.name}</h2>
                     <span className="text-lg font-bold">Ksh{p.price}</span>
                   </div>
-                  
-                  {/* Ratings will appear below on mobile */}
                   <div className="flex mt-2">
                     <Ratings ratings={p.rating} />
                   </div>

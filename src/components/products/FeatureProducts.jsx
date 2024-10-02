@@ -90,7 +90,7 @@ const FeatureProducts = ({ products }) => {
           <div className="w-[100px] h-[4px] bg-[#7fad39] mt-4"></div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-4 md-lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+      <div className="w-full grid grid-cols-4 md-lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6">
         {products
           ? products.map((p, i) => (
               <div

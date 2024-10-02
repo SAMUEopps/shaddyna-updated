@@ -99,7 +99,7 @@ const FeatureProducts = ({ products }) => {
               >
                 <div className="relative overflow-hidden">
                   {p.discount ? (
-                    <div className="flex justify-center items-center absolute text-white w-[38px] h-[38px] rounded-full bg-red-500 font-semibold text-xs right-2 top-2">
+                    <div className="flex justify-center items-center absolute text-white w-[38px] h-[38px] rounded-full bg-pink-400 font-semibold text-xs right-2 top-2">
                       {p.discount}
                     </div>
                   ) : (

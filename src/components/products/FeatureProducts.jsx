@@ -143,6 +143,22 @@ const FeatureProducts = ({ products }) => {
                   onClick={() => navigate(`/product/details/${p.slug}`)}
                   className="py-3 cursor-pointer text-slate-600 px-2"
                 >
+                  <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center">
+                    {/* Product Name and Price side by side on mobile */}
+                    <h2 className="font-medium">{p.name}</h2>
+                    <span className="text-lg font-bold">Ksh{p.price}</span>
+                  </div>
+                  
+                  {/* Ratings will appear below on mobile */}
+                  <div className="flex mt-2">
+                    <Ratings ratings={p.rating} />
+                  </div>
+                </div>
+                {/* 
+                <div
+                  onClick={() => navigate(`/product/details/${p.slug}`)}
+                  className="py-3 cursor-pointer text-slate-600 px-2"
+                >
                   <h2 className="font-medium">{p.name}</h2>
                   <div className="flex justify-start items-center gap-3">
                     <span className="text-lg  font-bold">Ksh{p.price}</span>
@@ -150,7 +166,7 @@ const FeatureProducts = ({ products }) => {
                       <Ratings ratings={p.rating} />
                     </div>
                   </div>
-                </div>
+                </div>*/}
               </div>
             ))
           : Array.from({ length: 12 }).map((_, i) => <Skeleton styles={"h-[260px] w-full "} key={i} />)}

@@ -105,10 +105,9 @@ const FeatureProducts = ({ products }) => {
                   ) : (
                     ""
                   )}
-
                   <img
                     onClick={() => navigate(`/product/details/${p.slug}`)}
-                    className="sm:w-full w-full h-[240px] cursor-pointer"
+                    className="sm:h-[180px] w-full h-[240px] cursor-pointer"
                     src={`${p.images[0]}`}
                     alt="img"
                   />

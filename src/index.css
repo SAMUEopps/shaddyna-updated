@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Young+Serif&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Young Serif", serif;
+}
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+  .hoverEffect:hover img {
+    opacity: 0.7; 
+    transition: all .3s ease-in-out;
+  }
+  
+  .absolute-overlay{
+    transition: all .3s ease-in-out;
+  }
+
+  .hover-zoom {
+    overflow: hidden;
+  }
+  
+  .hover-zoom img {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-zoom:hover img {
+    transform: scale(1.1);
+  }
+
+  @layer  {
+    .dashboard-link {
+      @apply flex justify-start items-center gap-2 py-3.5 px-2 cursor-pointer hover:bg-blue-100;
+    }
+  }
+

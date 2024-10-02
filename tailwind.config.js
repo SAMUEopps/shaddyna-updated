@@ -1,18 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      borderRadius: {
-        DEFAULT: "5px",
-        primary: "1.5rem",
-        secondary: "9999px",
-      },
-    },
+    extend: {},
+    screens: {
+      'xl': { 'max': '1200px' },
+      'lg': { 'max': '1080px' },
+      'md-lg': { 'max': '991px' },
+      'md': { 'max': '768px' },
+      'sm': { 'max': '576px' },
+      'xs': { 'max': '480px' },
+      '2xs': { 'max': '340px' },
+    }
   },
-  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar-hide")],
-};
+  plugins: [],
+}

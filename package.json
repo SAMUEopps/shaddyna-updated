@@ -23,6 +23,7 @@
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
     "react-window": "^1.8.10",
+    "serve": "^14.2.3",
     "stripe": "^14.16.0",
     "swiper": "^11.0.6",
     "web-vitals": "^2.1.4"

@@ -144,7 +144,7 @@ const FeatureProducts = ({ products }) => {
                 >
                   <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center">
                     {/* Reduced font sizes for product name and price on mobile */}
-                    <h2 className="font-medium text-sm sm:text-lg">{p.name}</h2>
+                    <text className="font-medium text-sm sm:text-lg">{p.name}</text>
                     <span className="text-sm sm:text-lg font-bold">Ksh{p.price}</span>
                   </div>
 

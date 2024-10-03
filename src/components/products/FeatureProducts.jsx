@@ -189,20 +189,24 @@ return (
             <div
               className="border group transition-all duration-500 hover:shadow-md bg-slate-50"
               key={i}
+              style={{ height: '100%' }} // Ensure the entire div takes up full height
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden flex flex-col justify-between" style={{ height: '240px' }}>
                 {p.discount ? (
                   <div className="flex justify-center items-center absolute text-white w-[30px] h-[30px] rounded-full bg-red-500 font-semibold text-xs right-2 top-2">
                     {p.discount}
                   </div>
                 ) : null}
 
-                <img
-                  onClick={() => navigate(`/product/details/${p.slug}`)}
-                  className="sm:w-full w-full h-auto object-cover cursor-pointer"
-                  src={`${p.images[0]}`}
-                  alt="img"
-                />
+                <div className="flex-grow flex justify-center items-center">
+                  <img
+                    onClick={() => navigate(`/product/details/${p.slug}`)}
+                    className="sm:w-full w-full h-auto max-h-[240px] object-contain cursor-pointer"
+                    src={`${p.images[0]}`}
+                    alt="img"
+                  />
+                </div>
+
                 <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50">
                   <li
                     onClick={() => add_card(p._id)}

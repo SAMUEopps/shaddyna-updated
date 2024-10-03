@@ -178,12 +178,12 @@ const FeatureProducts = ({ products }) => {
 return (
   <div className="w-[85%] sm:w-[90%] flex flex-wrap mx-auto">
     <div className="w-full">
-      <div className="text-center flex justify-center items-center flex-col text-4xl text-slate-600 font-bold relative pb-[45px]">
+      <div className="text-center flex justify-center items-center flex-col text-2xl sm:text-4xl text-slate-600 font-bold relative pb-[45px]">
         <h2>Feature Products</h2>
         <div className="w-[100px] h-[4px] bg-[#7fad39] mt-4"></div>
       </div>
     </div>
-    <div className="w-full grid grid-cols-4 md-lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+    <div className="w-full grid grid-cols-2 sm:grid-cols-4 md-lg:grid-cols-3 md:grid-cols-2 gap-6">
       {products
         ? products.map((p, i) => (
             <div
@@ -192,7 +192,7 @@ return (
             >
               <div className="relative overflow-hidden">
                 {p.discount ? (
-                  <div className="flex justify-center items-center absolute text-white w-[38px] h-[38px] rounded-full bg-red-500 font-semibold text-xs right-2 top-2">
+                  <div className="flex justify-center items-center absolute text-white w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] rounded-full bg-red-500 font-semibold text-xs right-2 top-2">
                     {p.discount}
                   </div>
                 ) : (
@@ -201,32 +201,32 @@ return (
 
                 <img
                   onClick={() => navigate(`/product/details/${p.slug}`)}
-                  className="sm:w-full w-full h-[240px] cursor-pointer object-cover" // Added object-cover
-                  src={`${p.images[0]}`}
+                  className="w-full h-auto max-h-[240px] object-cover cursor-pointer"
+                  src={p.images[0]}
                   alt="img"
                 />
-                <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50 ">
+                <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50">
                   <li
                     onClick={() => add_card(p._id)}
-                    className="w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white  absolute -left-10 top-10  group-hover:left-5  transition-all duration-300"
+                    className="w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-8 sm:-left-10 top-8 sm:top-10 group-hover:left-3 sm:group-hover:left-5 transition-all duration-300"
                   >
                     <AiOutlineShoppingCart />
                   </li>
                   <li
                     onClick={() => add_wishlist(p)}
-                    className="w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-10 top-[88px]  group-hover:left-5  transition-all duration-500"
+                    className="w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-8 sm:-left-10 top-[64px] sm:top-[88px] group-hover:left-3 sm:group-hover:left-5 transition-all duration-500"
                   >
                     <AiFillHeart />
                   </li>
                   <li
                     onClick={() => add_compare(p)}
-                    className="w-[38px] h-[38px] cursor-pointer z-50 bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white  absolute -left-10 top-[136px] group-hover:left-5  transition-all duration-700"
+                    className="w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] cursor-pointer z-50 bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-8 sm:-left-10 top-[108px] sm:top-[136px] group-hover:left-3 sm:group-hover:left-5 transition-all duration-700"
                   >
                     <FaArrowsSpin />
                   </li>
                   <Link
                     to={`/product/details/${p.slug}`}
-                    className="w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white  absolute -left-10 top-[184px]  group-hover:left-5  transition-all duration-1000"
+                    className="w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-8 sm:-left-10 top-[152px] sm:top-[184px] group-hover:left-3 sm:group-hover:left-5 transition-all duration-1000"
                   >
                     <FaEye />
                   </Link>
@@ -234,11 +234,13 @@ return (
               </div>
               <div
                 onClick={() => navigate(`/product/details/${p.slug}`)}
-                className="py-3 cursor-pointer text-slate-600 px-2"
+                className="py-2 sm:py-3 cursor-pointer text-slate-600 px-2"
               >
-                <h2 className="font-medium">{p.name}</h2>
+                <h2 className="font-medium text-sm sm:text-base">{p.name}</h2>
                 <div className="flex justify-start items-center gap-3">
-                  <span className="text-lg  font-bold">${p.price}</span>
+                  <span className="text-base sm:text-lg font-bold">
+                    ${p.price}
+                  </span>
                   <div className="flex">
                     <Ratings ratings={p.rating} />
                   </div>
@@ -247,12 +249,11 @@ return (
             </div>
           ))
         : Array.from({ length: 12 }).map((_, i) => (
-            <Skeleton styles={"h-[260px] w-full "} key={i} />
+            <Skeleton styles={"h-[260px] w-full"} key={i} />
           ))}
     </div>
   </div>
 );
-
 }
 
 export default FeatureProducts;

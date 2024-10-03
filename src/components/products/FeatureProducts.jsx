@@ -82,7 +82,7 @@ const FeatureProducts = ({ products }) => {
     }
   }, [errorMessage, successMessage]);
 
-  return (
+  /*return (
     <div className="w-[85%] sm:w-[90%] flex flex-wrap mx-auto">
       <div className="w-full">
         <div className="text-center flex justify-center items-center flex-col text-4xl text-slate-600 font-bold relative pb-[45px]">
@@ -144,12 +144,12 @@ const FeatureProducts = ({ products }) => {
                   className="py-2 cursor-pointer text-slate-600 px-2"
                 >
                   <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center">
-                    {/* Reduced font sizes for product name and price on mobile */}
+                    {/* Reduced font sizes for product name and price on mobile *
                     <text className="font-medium text-sm sm:text-lg">{p.name}</text>
                     <span className="text-sm sm:text-lg font-bold">Ksh{p.price}</span>
                   </div>
 
-                  {/* Reduced margins for the rating div on mobile */}
+                  {/* Reduced margins for the rating div on mobile *
                   <div className="flex mt-1 sm:mt-2 mb-1 sm:mb-2">
                     <Ratings ratings={p.rating} />
                   </div>
@@ -166,13 +166,90 @@ const FeatureProducts = ({ products }) => {
                       <Ratings ratings={p.rating} />
                     </div>
                   </div>
-                </div>*/}
+                </div>*
               </div>
             ))
           : Array.from({ length: 12 }).map((_, i) => <Skeleton styles={"h-[260px] w-full "} key={i} />)}
       </div>
     </div>
   );
-};
+};*/
+
+return (
+  <div className="w-[85%] sm:w-[90%] flex flex-wrap mx-auto">
+    <div className="w-full">
+      <div className="text-center flex justify-center items-center flex-col text-2xl sm:text-xl text-slate-600 font-bold relative pb-[30px]">
+        <h2>Feature Products</h2>
+        <div className="w-[70px] h-[3px] bg-[#7fad39] mt-2"></div>
+      </div>
+    </div>
+    <div className="w-full grid grid-cols-2 sm:grid-cols-2 gap-4">
+      {products
+        ? products.map((p, i) => (
+            <div
+              className="border group transition-all duration-500 hover:shadow-md bg-slate-50"
+              key={i}
+            >
+              <div className="relative overflow-hidden">
+                {p.discount ? (
+                  <div className="flex justify-center items-center absolute text-white w-[30px] h-[30px] rounded-full bg-red-500 font-semibold text-xs right-2 top-2">
+                    {p.discount}
+                  </div>
+                ) : null}
+
+                <img
+                  onClick={() => navigate(`/product/details/${p.slug}`)}
+                  className="sm:w-full w-full h-auto object-cover cursor-pointer"
+                  src={`${p.images[0]}`}
+                  alt="img"
+                />
+                <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50">
+                  <li
+                    onClick={() => add_card(p._id)}
+                    className="w-[30px] h-[30px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-10 top-10 group-hover:left-5 transition-all duration-300"
+                  >
+                    <AiOutlineShoppingCart />
+                  </li>
+                  <li
+                    onClick={() => add_wishlist(p)}
+                    className="w-[30px] h-[30px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-10 top-[70px] group-hover:left-5 transition-all duration-500"
+                  >
+                    <AiFillHeart />
+                  </li>
+                  <li
+                    onClick={() => add_compare(p)}
+                    className="w-[30px] h-[30px] cursor-pointer z-50 bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-10 top-[110px] group-hover:left-5 transition-all duration-700"
+                  >
+                    <FaArrowsSpin />
+                  </li>
+                  <Link
+                    to={`/product/details/${p.slug}`}
+                    className="w-[30px] h-[30px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-orange-500 hover:text-white absolute -left-10 top-[150px] group-hover:left-5 transition-all duration-1000"
+                  >
+                    <FaEye />
+                  </Link>
+                </ul>
+              </div>
+              <div
+                onClick={() => navigate(`/product/details/${p.slug}`)}
+                className="py-2 cursor-pointer text-slate-600 px-2"
+              >
+                <h2 className="font-medium text-sm">{p.name}</h2>
+                <div className="flex justify-start items-center gap-3">
+                  <span className="text-md font-bold">${p.price}</span>
+                  <div className="flex">
+                    <Ratings ratings={p.rating} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        : Array.from({ length: 12 }).map((_, i) => (
+            <Skeleton styles={"h-[240px] w-full "} key={i} />
+          ))}
+    </div>
+  </div>
+);
+}
 
 export default FeatureProducts;

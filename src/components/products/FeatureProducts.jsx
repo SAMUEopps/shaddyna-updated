@@ -107,11 +107,12 @@ const FeatureProducts = ({ products }) => {
                   )}
                   <img
                     onClick={() => navigate(`/product/details/${p.slug}`)}
-                    className="sm:h-[190px] w-full h-[240px] cursor-pointer"
+                    className="sm:h-[180px] w-full h-[240px] cursor-pointer"
                     src={`${p.images[0]}`}
                     alt="img"
                   />
-                  <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50 ">
+                 <ul className="flex flex-col transition-all duration-500 justify-start items-start gap-2 z-50 mt-0 sm:mt-4">
+
                     <li
                       onClick={() => add_card(p._id)}
                       className="w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded shadow hover:bg-blue-400 hover:text-white  absolute -left-10 top-10  group-hover:left-5  transition-all duration-300"
